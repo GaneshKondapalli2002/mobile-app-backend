@@ -1,0 +1,7 @@
+
+{
+  "mongoURI": "mongodb://localhost:27017/MobileApp",
+  "JWT_SECRET": "Mobile14333",
+  "EMAIL_USER": "kondapalliganeshsiva@gmail.com",
+  "EMAIL_PASS": "pzqu frmn jdyy fjpt"
+}
