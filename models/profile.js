@@ -1,11 +1,10 @@
-// models/profile.js
-
 const mongoose = require('mongoose');
 
 const ProfileSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
+    required: true,
   },
   address: String,
   city: String,
@@ -16,4 +15,4 @@ const ProfileSchema = new mongoose.Schema({
   idOptions: String,
 });
 
-module.exports = mongoose.models.Profile || mongoose.model('Profile', ProfileSchema);
+module.exports = mongoose.model('Profile', ProfileSchema);

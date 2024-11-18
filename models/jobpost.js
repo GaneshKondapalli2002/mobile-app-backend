@@ -13,8 +13,14 @@ const jobPostSchema = new mongoose.Schema({
   TemplateName: { type: String },
   isTemplate: { type: Boolean, default: false },
   status: { type: String, enum: ['open', 'assigned', 'upcoming', 'checkedIn', 'completed', 'draft'], default: 'open' },
-  checkedInTime: { type: Date },
-  checkedOutTime: { type: Date },
+  checkInTime: {
+    type: Date,
+    default: null
+  },
+   checkedOutTime: {
+    type: Date,
+    default: null
+  },
    patientWeight: {
     type: String,
     required: false,
@@ -27,10 +33,7 @@ const jobPostSchema = new mongoose.Schema({
     type: String,
     required: false,
   },
-  contactNumber: {
-    type: String,
-    required: false,
-  },
+ 
   signature: {
     type: String,
     required: false,
